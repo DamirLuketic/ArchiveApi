@@ -18,6 +18,16 @@ class CreateMediaTypesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        /**
+         * Initial data
+         */
+        DB::table('media_types')->insert([
+            'name' => 'CD'
+        ]);
+
+        DB::table('media_types')->insert([
+            'name' => 'LP'
+        ]);
     }
 
     /**

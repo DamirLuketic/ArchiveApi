@@ -18,10 +18,28 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        /**
+         * Initial data
+         */
+
+        DB::table('roles')->insert([
+            'name' => 'admin'
+        ]);
+
+        DB::table('roles')->insert([
+            'name' => 'editor'
+        ]);
+
+        DB::table('roles')->insert([
+            'name' => 'member'
+        ]);
+
+
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migration s.
      *
      * @return void
      */

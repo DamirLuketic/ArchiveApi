@@ -18,6 +18,17 @@ class CreateArtistsTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+        /**
+         * Initial data
+         */
+        DB::table('artists')->insert([
+            'name' =>'Leonard Cohen'
+        ]);
+
+        DB::table('artists')->insert([
+            'name' =>'Diana Krall'
+        ]);
     }
 
     /**

@@ -12,8 +12,8 @@ class Album extends Model
 	 * @var array
 	 */
 	protected $fillable = [
-		'artist_id', 'media_type_id', 'condition_id', 'title', 'release_year', 'first_release_year', 'description',
-		'private_note', 'barcode_number', 'cat', 'for_trade'
+		'user_id', 'artist_id', 'media_type_id', 'condition_id', 'title', 'release_year', 'first_release_year',
+        'description', 'private_note', 'barcode_number', 'cat', 'for_trade'
 	];
 
 	/**
