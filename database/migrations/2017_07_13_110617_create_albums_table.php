@@ -53,7 +53,7 @@ class CreateAlbumsTable extends Migration
             'artist_id'                 => 1,
             'media_type_id'             => 2,
             'condition_id'              => 2,
-            'title'                     => 'The Future',
+            'title'                     => 'Live in London',
             'first_release'             => 1,
             'release_year'              => '2009',
             'first_release_year'        => '2009',

@@ -17,17 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-/**
- * Routes to controllers resources
- */
-Route::resource('album', 'AlbumController');
-Route::resource('artist', 'ArtistController');
-Route::resource('condition', 'ConditionController');
-Route::resource('image', 'ImageController');
-Route::resource('media_type', 'MediaTypeController');
-Route::resource('rating', 'RatingController');
-Route::resource('role', 'RoleController');
-Route::resource('user', 'UserController');
+    /**
+     * Routes to controllers resources
+     */
+    Route::resource('album', 'AlbumController');
+    Route::resource('artist', 'ArtistController');
+    Route::resource('condition', 'ConditionController');
+    Route::resource('image', 'ImageController');
+    Route::resource('media_type', 'MediaTypeController');
+    Route::resource('rating', 'RatingController');
+    Route::resource('role', 'RoleController');
+    Route::resource('user', 'UserController');
 
-
-
+    /**
+     * Routes
+     */
+    Route::get('roles_list', 'RoleController@roles_list')->name('roles.list');
+    Route::get('albums_list', 'AlbumController@albums_list')->name('albums.list');

@@ -86,6 +86,6 @@ class RoleController extends Controller
     public function roles_list()
     {
         $roles = Role::all();
-        return json_encode($roles);
+        return $roles;
     }
 }

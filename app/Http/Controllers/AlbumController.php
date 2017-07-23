@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Album;
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller
@@ -80,5 +81,11 @@ class AlbumController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function albums_list()
+    {
+        $albums = Album::all();
+        return $albums;
     }
 }
