@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
             'role_id'       => 1,
             'name'          => 'Damir',
             'email'         => 'luketic.damir@gmail.com',
-            'password'      => 'pass11',
+            'password'      => '$2y$10$ENNJx1ApdPrz/FMfP.RJ1.TJADn5s379kbTMnZso/vZUU23fgoclq',
             'first_name'    => 'Damir',
             'last_name'     => 'Luketić'
         ]);
