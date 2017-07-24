@@ -34,3 +34,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
      */
     Route::get('roles_list', 'RoleController@roles_list')->name('roles.list');
     Route::get('albums_list', 'AlbumController@albums_list')->name('albums.list');
+
+    /**
+     * Not finish
+     */
+    Route::post('logIn', 'UserController@logIn')->name('user.login');

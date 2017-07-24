@@ -82,4 +82,9 @@ class UserController extends Controller
     {
         //
     }
+
+    public function logIn(Request $request)
+    {
+        return $request->all();
+    }
 }
