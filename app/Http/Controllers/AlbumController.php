@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Album;
+use App\Artist;
 use Illuminate\Http\Request;
 
 class AlbumController extends Controller
@@ -86,6 +87,29 @@ class AlbumController extends Controller
     public function albums_list()
     {
         $albums = Album::all();
+        foreach ($albums as $album)
+        {
+            $album['artist_name'] = $album->artist->name;
+            $album['user_name'] = $album->user->name;
+            $album['user_email'] = $album->user->email;
+            unset($album['artist']);
+            unset($album['user']);
+            unset($album['email']);
+        }
+        return $albums;
+    }
+
+    public function collection(Request $request)
+    {
+        $user_id = $request->all();
+        $albums = Album::whereUserId($user_id)->get();
+
+        foreach ($albums as $album)
+        {
+            $album['artist_name'] = $album->artist->name;
+            unset($album['artist']);
+        }
+
         return $albums;
     }
 }
